@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+shook_on:
+  id: 1
+  title: 'Shook on'
+  artist: 'Buck'
+  requests_count: 1
+toop_toop:
+  id: 2
+  title: 'Toop Toop'
+  artist: 'Cassius'
+  requests_count: 20
+ror:
+  id: 3
+  title: 'Ruby on Rails'
+  artist: 'Hoan and The Honky Tonk'
+  requests_count: 300
+

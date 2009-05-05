@@ -1,0 +1,27 @@
+%li
+  %ul
+    %li.title
+      = song.title.nil? ? "" : song.title.gsub(/\000/, '')
+    %li.artist
+      = song.artist
+    %br
+    %li.nick
+      = song.user.nick
+    - unless song.comment.blank?
+      %li.comment
+        = h song.comment
+    %li.count
+      = song.requests_count
+    - if song.dukeable?(@user)
+      %li.vote
+        %a{ :href => "/duke/#{song.id}" }
+          %img{ :src => "images/duke-it.png", :width => "55", :height => "18", :alt => "+ duke!", :title => "Duke this song", :onclick =>"return dukeSong(#{song.id});"}
+          
+    %li.ago
+      -unless song.played_at
+        -witticisms = ['nevar played','like a virgin']
+        =witticisms[rand(witticisms.size)]
+      -else
+        last played
+        =time_ago_in_words(song.played_at)
+        ago

@@ -1,0 +1,6 @@
+.DS_Store
+*.i*
+*.log
+*.mp3
+*.tmp
+.*.sw?

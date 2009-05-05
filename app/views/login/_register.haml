@@ -1,0 +1,13 @@
+- form_for (:user, :url => register_url) do |f|
+  %div{:class => 'form_field'}
+    %label{:for => 'user_nick'} Nick:
+    %br
+    = f.text_field('nick')
+  %div{:class => 'form_field'}
+    %label{:for => 'user_password'} Password:
+    %br
+    = f.password_field('password')
+  %p
+    = submit_tag('Register')
+    or
+    = link_to_function 'Cancel', visual_effect(:toggle_blind, 'register_form')

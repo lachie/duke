@@ -1,0 +1,13 @@
+%h2 Playing
+
+%ul#current
+  %li.title
+    = song.title.nil? ? "" : song.title.gsub(/\000/, '')
+  %li.artist
+    = song.artist
+  %br
+  %li.nick
+    = song.user.nick
+  - unless song.comment.blank?
+    %li.comment
+      = song.comment

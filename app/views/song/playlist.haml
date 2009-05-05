@@ -1,0 +1,9 @@
+%h2 Upcoming
+
+%ol#upcoming.songlist
+  = render :partial => "/song/song", :collection => @songs
+  
+%h2 Played
+
+%ol#played.songlist
+  = render :partial => '/song/song', :collection => @played_songs

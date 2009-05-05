@@ -1,0 +1,27 @@
+- content_for :menu do
+  - unless !@user
+    %ul.buttons
+      %li#upload_button
+        = link_to_function '<span>Upload</span>', visual_effect(:toggle_blind, 'upload_form')
+        = "(mp3 only)"
+    #upload_form{:style => 'display:none'}
+      = render(:partial => 'form')
+    - content_for :user do
+      %h3 Account
+      You're duking as 
+      %span.strong
+        = "#{@user.nick.capitalize}"
+      %ul.buttons
+        %li#logout_button= link_to '<span>Logout</span>', :controller => :login, :action => :logout
+  - else
+    %h2 About Duke
+    %p Duke allows you to upload your tracks to the global playlist and vote up the tracks you would prefer to hear.
+    - content_for :user do
+      %ul.buttons
+        %li#login_button= link_to_function '<span>Login</span>', visual_effect(:toggle_blind, 'login_form')
+        %li#register_button= link_to_function '<span>Register</span>', visual_effect(:toggle_blind, 'register_form')
+      #login_form{:style => 'display:none'}
+        = render(:partial => 'login/login')
+      #register_form{:style => 'display:none'}
+        = render(:partial => 'login/register')
+= render :file => 'layouts/application'

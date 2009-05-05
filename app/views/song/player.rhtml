@@ -1,0 +1,32 @@
+<html>
+
+<body onload="initSound();">
+
+<%= render :partial => "/song/playingnow", :locals => {:song => @song} %>
+
+
+<%= javascript_include_tag 'soundmanager2'%>
+
+<script type="text/javascript">
+    function initSound() {
+        soundManager.debugMode = false;
+        soundManager.url = '/soundmanager2.swf'; // path to swf
+    }
+    soundManager.onload = function() {
+        // soundManager should be ready to use/call at this point
+
+        <% if @song %>
+        soundManager.createSound('<%= @song.id%>', '<%= @song.public_filename%>');
+        soundManager.play('<%= @song.id %>',
+        {
+                onfinish:function() {
+                    window.location.href = '/song/player';
+                }
+        });
+        <% end %>
+    }
+</script>
+
+</body>
+</html>
+        

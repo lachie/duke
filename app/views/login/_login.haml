@@ -1,0 +1,13 @@
+- form_for (:user, :url => login_url) do |f|
+  %div.form_field
+    %label{:for => 'user_nick'} Nick:
+    %br/
+    = f.text_field('nick')
+  %div.form_field
+    %label{:for => 'user_password'} Password:
+    %br/
+    = f.password_field('password')
+  %p
+    = submit_tag('Login')
+    or
+    = link_to_function 'Cancel', visual_effect(:toggle_blind, 'login_form')

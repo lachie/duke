@@ -1,0 +1,12 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+shook_by_1:
+  user_id: 1
+  song_id: 1
+  
+shook_by_2:
+  user_id: 2
+  song_id: 1
+
+toop_toop_by_1:
+  user_id: 1
+  song_id: 2

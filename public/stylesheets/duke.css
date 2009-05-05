@@ -1,0 +1,178 @@
+body 			{ font-family: Helvetica, Arial, sans-serif; background-color: #d6d6d6; margin: 0; padding: 0; color: #333;}
+
+/* layout */
+
+#banner 		{ width: 100%; height: 48px; background-color: #4a88d4; border-bottom: 10px solid #98c4e9; padding-top: 7px;}
+#banner h1		{ width: 960px; margin: 0 auto; padding: 0;
+					background-image: url("../images/duke.png"); background-position: top left; background-repeat: no-repeat; line-height: 1000px; overflow: hidden;}
+
+#container {
+  margin: 0 auto;
+  position: relative;
+}
+
+#header {
+  background-color: #5B87CF;
+	padding: 0.5em;
+	border-bottom: 6px solid #aaf;
+}
+
+#content {
+  width: 600px;
+  background-color: #fff;
+  border: 1px solid #999;
+  padding: 25px 40px 25px 25px;
+  float: left;
+  margin: 25px;
+}
+
+#sidebar {
+  float: left;
+  width: 220px;
+  background-color: #fff;
+  border: 1px solid #999;
+  padding: 30px;
+  margin: 25px;
+}
+
+#footer {
+  clear: both;
+  text-align: center;
+  width: 600px;
+  margin: 25px;
+  padding: 0 40px 0 25px;
+}
+
+h2 {
+  font-size: 12px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #999;
+  padding: 0 15px 5px 15px;
+  margin-bottom: 0;
+}
+
+ol.songlist {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+ul#current {
+  background-color :#efffbd;
+}
+
+ul#current,
+ol.songlist ul {
+  margin-top: 0;
+  padding: 15px;
+  padding-left: 40%;
+  list-style: none;
+}
+
+ul#current .title,
+ol.songlist .title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  display: inline;
+/*  text-transform: uppercase;*/
+}
+
+ul#current .artist,
+ol.songlist .artist {
+  display: inline;
+  color: #999;
+  font-size: 12px;
+/*  text-transform: uppercase;*/
+}
+
+ul#current .artist:before,
+ol.songlist .artist:before {
+  content: "// ";
+}
+
+ul#current .comment,
+ol.songlist .comment {
+  display: inline;
+  color: #999;
+  font-size: 12px;
+/*  text-transform: uppercase;*/
+}
+
+ul#current .comment:before,
+ol.songlist .comment:before {
+  content: "// ";
+}
+
+ol.songlist .ago {
+  font-size: 50%;
+  color: #aaa;
+}
+
+ul#current .nick,
+ol.songlist .nick {
+/*  border-top: 1px solid #999;*/
+  padding: 5px 0 10px 0;
+  font-size: 18px;
+  display: inline;
+}
+
+ol.songlist ul {
+  position: relative;
+  border-bottom: 1px solid #999;
+}
+
+ol.songlist .count {
+  font-size: 40px;
+  text-align: right;
+  line-height: .9;
+  position: absolute;
+  top: 15px;
+  left: 15%;
+}
+
+ol.songlist .vote {
+  position: absolute;
+  top: 15px;
+  left: 25%;
+}
+
+/* table */
+
+table 			{ width: 100%; border-collapse: collapse; margin: 0px 0 25px 0;}
+td				{ border-bottom: 1px solid #999;}
+thead th		{  text-transform: uppercase; font-size: 12px; border-bottom: 1px solid #999; padding: 0 15px 5px 15px;}
+td, th			{ vertical-align: top; text-align: left; padding: 15px 15px 0 15px; line-height: 1;}
+
+tr.highlighted 	{ background-color: #efffbd;}
+th.outside 		{ background-color: #fff !important; border: 0; padding: 15px 10px 0 0;}
+
+img 			{ display: block; border: 0; margin-bottom: 10px; padding: 0;}
+
+table h2		{ padding: 0; margin: 0; font-size: 18px; font-weight; normal}
+table p			{ padding: 0; margin: 5px 0 10px 0; font-size: 18px;}
+table span		{ color: #999; font-size: 12px;}
+
+.big			{ font-size: 40px; text-align: right;line-height: .9;}
+.stats ul 		{ list-style: none; margin: 0; padding: 0; font-size: 12px; line-height: 1.4;}
+.stats li		{ }
+
+/* sidebar*/
+
+#sidebar .username 		{ font-size: 24px; }
+#sidebar .username a 	{ font-size: 10px; }
+#sidebar .numvotes		{ font-size: 24px; }
+#sidebar p span			{ display: block;  }
+#sidebar p .small		{ font-size: 10px;  }
+#sidebar h4				{ margin: 15px 0 0 0; padding: 0; line-height: 1.2;}
+#sidebar p				{ margin: 0; padding: 0 0 10px 0; line-height: 1.2;}
+#sidebar ul 			{ list-style: none; margin: 0; padding: 0;}
+#sidebar ul li 			{ line-height: 1.2;}
+#sidebar .group			{ border-top: 1px solid #ccc; padding: 10px 0 0 0; margin: 20px 0 0 0;}
+
+a#upload				{ display: block; width: 108px; height: 36px;background-image: url(../images/upload.png); background-position: top left; background-repeat: no-repeat; line-height: 1000; overflow: hidden;}
+a#upload:hover			{ background-position: bottom left; }
+
+.up			{ color: #3a8629; }
+.down		{ color: #dc005b; }

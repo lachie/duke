@@ -1,0 +1,9 @@
+- form_for :song, @song, :url => songs_path, :html => { :multipart => true } do |f|
+  = error_messages_for :song
+  %div.form_field
+    %label{:for => 'song_comment'} Dedication:
+    %br/
+    = f.text_field :comment, :size => 40
+    = f.file_field :uploaded_data
+  = link_to_function 'Cancel', visual_effect(:toggle_blind, 'upload_form')
+  = submit_tag 'Submit'

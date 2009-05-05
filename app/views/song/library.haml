@@ -1,0 +1,9 @@
+%table
+  %tr
+    %th Artist
+    %th Title
+  - for song in @songs
+    %tr
+      %td= song.artist
+      %td= song.title
+		

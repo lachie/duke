@@ -1,0 +1,11 @@
+        <li>
+          <% if logged_in? and !song.requested_by?(@user) %>
+            <img class="voter" src="/images/duke-it.png" onclick="return voteForSong(<%= song.id %>);"/>
+          <% else %>
+            <img class="voter" src="/images/duked_it.png"/>
+          <% end %>
+          <span class="requests_count" id="count-<%= song.id %>"><%= song.requests_count %></span>
+          <span class="songartist"><%= song.user.nick %></span>
+          <span class="songtitle"><%=h song.title %></span> -
+          <span class="songartist"><%=h song.artist %></span>
+        </li>
